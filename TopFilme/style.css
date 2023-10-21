@@ -11,7 +11,8 @@ u1{
 }
 
 li{
-    display: block;
+    
+    display: flex;
 }
 
 li a{
@@ -19,8 +20,19 @@ li a{
     color: #432C3E;
     text-decoration: none;
     padding: 13px 50px;
+    margin-right: 0px;
+    margin-left: 80px;
+    font-size: 50px;
+    
+}
+
+li c{
+    display: block;
+    color: #432C3E;
+    text-decoration: none;
+    padding: 13px 50px;
     margin-right: 250px;
-    margin-left: 65px;
+    margin-left: 285px;
     font-size: 50px;
     
 }
@@ -30,7 +42,6 @@ li a{
     width: 100%;
     background-color: white;
     display: flex;
-    justify-content: space-between;
     margin-top: 0%;
     
 }
@@ -42,6 +53,6 @@ body{
 }
 
 img{
-    box-shadow: 5px 5px 5px gray;
-    margin-left: 90%;
+    margin-top: 55px;
+    margin-left: 0%;
 }
