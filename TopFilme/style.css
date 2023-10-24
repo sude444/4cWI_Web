@@ -52,9 +52,22 @@ body{
     margin-top: 0%;
 }
 
-img{
-    margin-top: 55px;
-    margin-left: 0%;
+
+.MoviePoster{
+    position: relative;
+    top: -224px;
+    margin-left: 250px;
+    width: 150px;
+    height: 230px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.TopFilmeHerz{
+    margin-top: 37px;
+    margin-left: -50px;
+    width: 65px;
+    height: 45px;
 }
 
 h1{
@@ -63,18 +76,19 @@ h1{
     margin-left: 25px;
 
 }
-p{ 
+.datum{ 
     color: white;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: 25px;
     font-size: 19px;
     font-weight: lighter;
     
 }
-p2{
+.rating{
     color: white;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 25px;
+    font-size: 19px;
     font-weight: lighter;
 }
 
