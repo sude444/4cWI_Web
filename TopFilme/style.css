@@ -11,7 +11,6 @@ u1{
 }
 
 li{
-    
     display: flex;
 }
 
@@ -23,7 +22,6 @@ li a{
     margin-right: 0px;
     margin-left: 80px;
     font-size: 50px;
-    
 }
 
 li c{
@@ -34,7 +32,6 @@ li c{
     margin-right: 230px;
     margin-left: 290px;
     font-size: 50px;
-    
 }
 
 .header{
@@ -43,7 +40,6 @@ li c{
     background-color: white;
     display: flex;
     margin-top: 0%;
-    
 }
 
 body{
@@ -74,15 +70,14 @@ h1{
     color: white;
     margin-top: 20px;
     margin-left: 25px;
-
 }
+
 .datum{ 
     color: white;
     margin-top: 50px;
     margin-left: 25px;
     font-size: 19px;
     font-weight: lighter;
-    
 }
 .rating{
     color: white;
