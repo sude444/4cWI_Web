@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://127.0.0.1:5500/TopFilme/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <title>TopFilme</title>
+    
+    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<link rel="stylesheet" href="./Document_files/stylesheet.css"><link rel="stylesheet" href="./Document_files/style.css"></head>
+
+<body>
+    <div>
+        <ul class="header">
+                    <li><a class="topFilme" href="http://127.0.0.1:5500/TopFilme/index.html"><b>Top</b>filme</a></li>
+                    <img class="topFilmeHerz" src="./Document_files/TopFilmeHerz1.png" height="200px" weight="auto">
+                    <li><c class="lieblingsfilm" href="genre.html">Suche deinen <b>Lieblings</b>film</c></li>
+        </ul>
+    </div>
+    <div class="abstandOben">
+        <div class="box">
+            <h1>Film Titel1</h1>
+            <p class="datum">Datum</p>
+            <p class="rating">Rating</p>
+            <img class="moviePoster" src="./Document_files/Movie.webp">
+        </div>
+
+        <div class="box">
+            <h1>Film Titel2</h1>
+            <p class="datum">Datum</p>
+            <p class="rating">Rating</p>
+            <img class="moviePoster" src="./Document_files/Movie.webp">
+        </div>
+
+        <div class="box">
+            <h1>Film Titel3</h1>
+            <p class="datum">Datum</p>
+            <p class="rating">Rating</p>
+            <img class="moviePoster" src="./Document_files/Movie.webp">
+        </div>
+
+        <div class="searchbar">
+            <img class="lupe" src="./Document_files/Lupe.png">
+            <p class="suche">Suche...</p>
+        </div>
+    </div>
+
+    <div class="genre"> 
+        <h2> MovieTitle</h2>
+    </div>
+    <div class="box2">
+        <p class="releaseDateUB">Release date:</p>
+        <p class="releaseDate">04.04.2005</p>
+
+        <p class="releaseDateUB">Rating:</p>
+        <p class="releaseDate">10/10</p>
+
+        <p class="releaseDateUB">Director:</p>
+        <p class="releaseDate">Sude Bayar</p>
+
+        <p class="releaseDateUB">Plot:</p>
+        <p class="releaseDate">In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town.</p>
+    </div>
+
+    <img class="moviePosterRD" src="./Document_files/Movie.webp">
+
+ </body></html>

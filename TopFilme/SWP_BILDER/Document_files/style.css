@@ -109,7 +109,7 @@ h2{
 }
 
 .abstandOben{
-    margin-top: 70px;
+    margin-top: 55px;
     
 }
 
@@ -135,11 +135,12 @@ h2{
 
 .moviePosterRD{
     position: relative;
-    top: -680px;
-    margin-left: 1120px;
-    width: 230px;
-    height: 330px;
-    border-bottom-left-radius: 14px;
+    top: -832px;
+    margin-left: 1150px;
+    width: 190px;
+    height: 280px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
 }
 
 
