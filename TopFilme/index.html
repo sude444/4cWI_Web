@@ -12,58 +12,80 @@
 </head>
 
 <body>
-    <div>
-        <ul class="header">
-                    <li><a class="topFilme" href="index.html"><b>Top</b>filme</a></li>
-                    <img class="topFilmeHerz" src="SWP_BILDER/TopFilmeHerz1.png" height="200px" weight="auto">
-                    <li><c class="lieblingsfilm" href="genre.html">Suche deinen <b>Lieblings</b>film</c></li>
-        </ul>
-    </div>
-    <div class="abstandOben">
-        <div class="box">
-            <h1>FNAF</h1>
-            <p class="datum">24.10.23</p>
-            <p class="rating">04/10</p>
-            <img class="moviePoster" src="SWP_BILDER/Movie.webp">
+
+    
+    <div class="mitte">
+        <div>
+            <ul class="header">
+                        <li><a class="topFilme" href="index.html"><b>Top</b>filme</a></li>
+                        <img class="topFilmeHerz" src="SWP_BILDER/TopFilmeHerz1.png" height="200px" weight="auto">
+                        <li><c class="lieblingsfilm" href="genre.html">All your <b>Favourite</b>Movies</c></li>
+            </ul>
+        </div>
+        <div class="abstandOben">
+            <div class="box">
+                <h1>Elemental</h1>
+                <p class="datum">16.06.23</p>
+                <p class="rating">7,0/10</p>
+                <img class="moviePoster" src="SWP_BILDER/elemental.jpeg">
+            </div>
+
+            <div class="box">
+                <h1>Barbie</h1>
+                <p class="datum">20.06.23</p>
+                <p class="rating">7,0/10</p>
+                <img class="moviePoster" src="SWP_BILDER/barbie.jpg">
+            </div>
+
+            <div class="box">
+                <h1>Scream VI</h1>
+                <p class="datum">10.03.23</p>
+                <p class="rating">6,5/10</p>
+                <img class="moviePoster" src="SWP_BILDER/screamVI.jpg">
+            </div>
+
+            <div class="searchbar">
+                <img class="lupe" id="searchicon"src="SWP_BILDER/Lupe.png">
+                <input class="input" type="text" id="searchInput">
+            </div>
         </div>
 
-        <div class="box">
-            <h1>Film Titel2</h1>
-            <p class="datum">Datum</p>
-            <p class="rating">Rating</p>
-            <img class="moviePoster" src="SWP_BILDER/Movie.webp">
+        <div class="genre"> 
+            <h2 id="apiTitle"> Five Nights at Freddy's</h2>
+        </div>
+        <div class="box2">
+            <p class="releaseDateUB">Release date:</p>
+            <p class="releaseDate" id="apiDate">24.10.23</p>
+
+            <p class="releaseDateUB">Rating:</p>
+            <p class="releaseDate" id="apiRating">04/10</p>
+
+            <p class="releaseDateUB">Director:</p>
+            <p class="releaseDate"id="apiDirector">Sude Bayar</p>
+
+            <p class="releaseDateUB">Plot:</p>
+            <p class="releaseDate"id="apiPlot">In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town.</p>
         </div>
 
-        <div class="box">
-            <h1>Film Titel3</h1>
-            <p class="datum">Datum</p>
-            <p class="rating">Rating</p>
-            <img class="moviePoster" src="SWP_BILDER/Movie.webp">
-        </div>
+        <img class="moviePosterRD" id="apiImg" src="SWP_BILDER/Movie.webp">
 
-        <div class="searchbar">
-            <img class="lupe" src="SWP_BILDER/Lupe.png">
-            <p class="suche">Suche...</p>
-        </div>
     </div>
 
-    <div class="genre"> 
-        <h2> MovieTitle</h2>
-    </div>
-    <div class="box2">
-        <p class="releaseDateUB">Release date:</p>
-        <p class="releaseDate">24.10.23</p>
 
-        <p class="releaseDateUB">Rating:</p>
-        <p class="releaseDate">04/10</p>
-
-        <p class="releaseDateUB">Director:</p>
-        <p class="releaseDate">Sude Bayar</p>
-
-        <p class="releaseDateUB">Plot:</p>
-        <p class="releaseDate">In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town.</p>
-    </div>
-
-    <img class="moviePosterRD" src="SWP_BILDER/Movie.webp">
-
-</html> 
+    <script>
+        document.getElementById('searchicon').addEventListener('click', function () {
+            var searchQuery = document.getElementById('searchInput').value;
+            fetch(`http://www.omdbapi.com?t=${searchQuery}&apikey=cea04f46`)
+            .then((res)=>res.json()
+            .then((result)=>{
+                console.log(result)
+                document.getElementById('apiTitle').textContent = result.Title;
+                document.getElementById('apiDate').textContent = result.Released;
+                document.getElementById('apiRating').textContent = result.imdbRating;
+                document.getElementById('apiDirector').textContent = result.Director;
+                document.getElementById('apiPlot').textContent = result.Plot;
+                document.getElementById('apiImg').src = result.Poster;
+            }))
+        })
+    </script>
+</html>

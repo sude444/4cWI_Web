@@ -47,6 +47,9 @@ body{
     background-color: #A991A1;
     margin-left: 0%;
     margin-top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -69,6 +72,7 @@ body{
 
 h1{
     color: white;
+    margin-top: 30px;
     margin-left: 25px;
     font-size: 35px;
 }
@@ -76,8 +80,8 @@ h1{
 h2{
     color: white;
     margin-top: 30px;
-    padding: 13px 20px;
-    margin-right: 230px;
+    padding-left: 20px;
+    
     font-size: 35px;
 }
 
@@ -189,11 +193,23 @@ h2{
     border-radius: 30px;
 }
 
+.input{
+    background-color: rgba(255,255,255,0);
+    border:none;
+    height: 46px;
+    font-size: 25px;
+    font-weight: light;
+    color:#432C3E;
+    margin-left: 20px; 
+}
+
+
 .lupe{
     margin-top: 12px;
     margin-left: 30px;
     width: 24px;
     height: 24px;
+    
 }
 
 .suche{
@@ -209,5 +225,9 @@ h2{
     padding: 20px 5px;
     font-size: 25px;
     color: white;
-
 }
+
+input:focus {
+    outline: none;
+}
+
