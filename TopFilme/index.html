@@ -24,24 +24,24 @@
         </div>
         <div class="abstandOben">
             <div class="box">
-                <h1 class="Title2">Elemental</h1>
-                <p class="datum">16 Jun 2023</p>
-                <p class="rating">7/10</p>
-                <img class="moviePoster" src="SWP_BILDER/elemental.jpeg">
+                <h1 id="Film1">Elemental</h1>
+                <p id="Date1"class="datum">16 Jun 2023</p>
+                <p id="Rating1" class="rating">7/10</p>
+                <img id="Poster1" class="moviePoster" src="SWP_BILDER/elemental.jpeg">
             </div>
 
             <div class="box">
-                <h1>Barbie</h1>
-                <p class="datum">21 Jun 2023</p>
-                <p class="rating">7/10</p>
-                <img class="moviePoster" src="SWP_BILDER/barbie.jpg">
+                <h1 id="Film2">Barbie</h1>
+                <p id="Date2" class="datum">21 Jun 2023</p>
+                <p id="Rating2" class="rating">7/10</p>
+                <img id="Poster2" class="moviePoster" src="SWP_BILDER/barbie.jpg">
             </div>
 
             <div class="box">
-                <h1>Snow White</h1>
-                <p class="datum">21 Sep 1937</p>
-                <p class="rating">7.6/10</p>
-                <img class="moviePoster" src="SWP_BILDER/snowwhite.jpg">
+                <h1 id="Film3">Snow White</h1>
+                <p id="Date3" class="datum">21 Sep 1937</p>
+                <p id="Rating3" class="rating">7.6/10</p>
+                <img id="Poster3" class="moviePoster" src="SWP_BILDER/snowwhite.jpg">
             </div>
 
             <div class="searchbar">
@@ -74,7 +74,6 @@
 
 
     <script>
-
         document.getElementById('searchicon').addEventListener('click', function () {
             var searchQuery = document.getElementById('searchInput').value;
             fetch(`http://www.omdbapi.com?t=${searchQuery}&apikey=cea04f46`)
@@ -90,18 +89,43 @@
             }))
         })
 
-        let btnRandom = document.querySelector('searchicon');
-        let result = document.querySelector('h1');
+        const Filmliste = ["Scream", "Barbie", "Elemental", "Snow White", "Mulan", "Frozen", "IT", "Frozen II", "Scream VI", "Tangled", "Inside out", "Cars", "Moana", "Finfing Nemo"]
 
-        let Title1 = ['Barbie', 'Mulan', 'Elemental', 'Snow White'];
+            var Titel1 = Filmliste[Math.floor(Math.random()*Filmliste.length)]
+            var Titel2 = Filmliste[Math.floor(Math.random()*Filmliste.length)]
+            var Titel3 = Filmliste[Math.floor(Math.random()*Filmliste.length)]
 
-        function getRandomNumber(min, max) {
-            let step1 = max - min + 1; 
-            let step2 = Math.random() * step1;
-            let result = Math.floor(step2) + min;
-            
-            return document.getElementById('Title2').textContent = result;
-        }
+            fetch(`http://www.omdbapi.com?t=${Titel1}&apikey=cea04f46`)
+            .then((res)=>res.json()
+            .then((result)=>{
+                console.log(result)
+                document.getElementById('Film1').textContent = result.Title;
+                document.getElementById('Date1').textContent = result.Released;
+                document.getElementById('Poster1').src = result.Poster;
+                document.getElementById('Rating1').textContent = result.imdbRating;
+            }))
+
+            fetch(`http://www.omdbapi.com?t=${Titel2}&apikey=cea04f46`)
+            .then((res)=>res.json()
+            .then((result)=>{
+                console.log(result)
+                document.getElementById('Film2').textContent = result.Title;
+                document.getElementById('Date2').textContent = result.Released;
+                document.getElementById('Poster2').src = result.Poster;
+                document.getElementById('Rating2').textContent = result.imdbRating;
+            }))
+
+            fetch(`http://www.omdbapi.com?t=${Titel3}&apikey=cea04f46`)
+            .then((res)=>res.json()
+            .then((result)=>{
+                console.log(result)
+                document.getElementById('Film3').textContent = result.Title;
+                document.getElementById('Date3').textContent = result.Released;
+                document.getElementById('Poster3').src = result.Poster;
+                document.getElementById('Rating3').textContent = result.imdbRating;
+
+        }))
+
 
     </script>
 </html>
