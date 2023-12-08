@@ -24,7 +24,7 @@
         </div>
         <div class="abstandOben">
             <div class="box">
-                <h1>Elemental</h1>
+                <h1 class="Title2">Elemental</h1>
                 <p class="datum">16 Jun 2023</p>
                 <p class="rating">7/10</p>
                 <img class="moviePoster" src="SWP_BILDER/elemental.jpeg">
@@ -47,6 +47,7 @@
             <div class="searchbar">
                 <img class="lupe" id="searchicon"src="SWP_BILDER/Lupe.png">
                 <input class="input" type="text" id="searchInput">
+                
             </div>
         </div>
 
@@ -73,6 +74,7 @@
 
 
     <script>
+
         document.getElementById('searchicon').addEventListener('click', function () {
             var searchQuery = document.getElementById('searchInput').value;
             fetch(`http://www.omdbapi.com?t=${searchQuery}&apikey=cea04f46`)
@@ -87,5 +89,19 @@
                 document.getElementById('apiImg').src = result.Poster;
             }))
         })
+
+        let btnRandom = document.querySelector('searchicon');
+        let result = document.querySelector('h1');
+
+        let Title1 = ['Barbie', 'Mulan', 'Elemental', 'Snow White'];
+
+        function getRandomNumber(min, max) {
+            let step1 = max - min + 1; 
+            let step2 = Math.random() * step1;
+            let result = Math.floor(step2) + min;
+            
+            return document.getElementById('Title2').textContent = result;
+        }
+
     </script>
 </html>
