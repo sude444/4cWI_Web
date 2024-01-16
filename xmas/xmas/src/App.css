@@ -29,6 +29,7 @@ body{
   color: rgb(1, 128, 1);
 }
 
+
 h1{
   font-size: calc(15px + 2vmin);
   color: rgb(100, 100, 194);
@@ -36,7 +37,7 @@ h1{
 }
 
 h2{
-  font-size: calc(22px + 2vmin);
+  font-size: calc(25px + 2vmin);
   color:darkgreen;
   font-weight:bold;
 }
@@ -58,7 +59,7 @@ p{
 .erklärung{
   margin-left: 5%;
   margin-right: 5%;
-  font-size: calc(10px + 1vmin);
+  font-size: calc(15px + 1vmin);
 }
 
 .keks2{
