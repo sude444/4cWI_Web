@@ -38,7 +38,7 @@ export default function MovieContainer() {
     return (
         <div>
             <div className="fixed border mb-4 bg-white w-full h-28">
-                <h1>Movie X</h1>
+                <h1>Search for your favourite movies</h1>
 
                 <input
                     className="border mb-4"
