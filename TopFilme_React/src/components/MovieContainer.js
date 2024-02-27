@@ -37,32 +37,37 @@ export default function MovieContainer() {
     };
     return (
         <div>
-            <div className="fixed border mb-4 bg-white w-full h-28">
+            <div className="fixed border mb-1 bg-white w-full h-21 gap-9 p-8 text-UB">
+                <div className="text-3xl font-medium text-center  ">
                 <h1>Search for your favourite movies</h1>
-
-                <input
-                    className="border mb-4"
-                    type="text"
-                    placeholder="Search"
-                    onChange={(el) => {
-                        console.log(el.target.value);
-                        filterMovie(el.target.value);
-                    }}
-                />
-                  {isLoading && <Audio
-                    height="80"
-                    width="80"
-                    radius="9"
-                    color="green"
-                    ariaLabel="loading"
-                    wrapperStyle
-                    wrapperClass
-                />}
+                </div>
+                <div className="text-center my-5 ">
+                    <input
+                        className="border mb-4 rounded-2xl text-center"
+                        type="text"
+                        placeholder="Search"
+                        onChange={(el) => {
+                            console.log(el.target.value);
+                            filterMovie(el.target.value);
+                        }}
+                    />
+                    
+                    {isLoading && <Audio
+                        height="80"
+                        width="80"
+                        radius="9"
+                        color="pink"
+                        ariaLabel="loading"
+                        wrapperStyle
+                        wrapperClass
+                    />}
+                </div>
+              
             </div>
             <div className="pt-32">
                 <div>{message}</div>
               
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 p-8 ">
+                <div className="grid grid-cols-3 lg:grid-cols-2 gap-9 p-8 ">
 
                     {movies.map((movie) => {
                         return (
@@ -70,7 +75,7 @@ export default function MovieContainer() {
                                 date={movie.Year}
                                 imageUri={movie.Poster}
                                 title={movie.Title}
-                                rating={movie.Year}
+                                plot={movie.Plot}
                             />
                         );
                     })}
