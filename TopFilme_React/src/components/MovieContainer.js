@@ -59,7 +59,13 @@ export default function MovieContainer() {
 
             </div>
 
+            <div className="pt-32 h-screen">
 
+                <div>{message}</div>
+                {isLoading && <Loading />}
+                <MovieGrid movies={movies} />
+
+            </div>
 
         </div>
     );
