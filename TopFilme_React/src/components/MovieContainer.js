@@ -37,13 +37,13 @@ export default function MovieContainer() {
     };
     return (
         <div>
-            <div className="fixed border mb-1 bg-white w-full h-21 gap-9 p-8 text-UB">
+            <div className="fixed border mb-1 bg-white w-full  p-1 text-UB">
                 <div className="text-3xl font-medium text-center  ">
                 <h1>Search for your favourite movies</h1>
                 </div>
                 <div className="text-center my-5 ">
                     <input
-                        className="border mb-4 rounded-2xl text-center"
+                        className="border mb-0 rounded-2xl text-center"
                         type="text"
                         placeholder="Search"
                         onChange={(el) => {
@@ -70,6 +70,7 @@ export default function MovieContainer() {
                 <div className="grid grid-cols-3 lg:grid-cols-2 gap-9 p-8 ">
 
                     {movies.map((movie) => {
+                        console.log(movie);
                         return (
                             <Movie
                                 date={movie.Year}
