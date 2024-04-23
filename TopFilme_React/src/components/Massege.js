@@ -1,16 +1,16 @@
-//import React from 'react'
-//import { Audio } from 'react-loader-spinner'
+import React from 'react'
+import { Audio } from 'react-loader-spinner'
 
-//unction Loading() {
-// return (
-//   <div className="pt-32 h-screen">
+function Loading() {
+ return (
+   <div className="pt-32 h-screen">
 
-//     <div>{message}</div>
-//   {isLoading && <Loading />}
-// <MovieGrid movies={movies} />
+    <div>{message}</div>
+    {isLoading && <Loading />}
+    <MovieGrid movies={movies} />
 
-// </div>
-//)
-//}
+ </div>
+)
+}
 
-//export default Loading
+export default Loading
